@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font-awesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- My Link -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#"
+              ><span class="icon"><i class="fa-brands fa-apple"></i></span>
+              <span class="title">Brand Name</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-house"></i></span>
+              <span class="title">Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-user"></i></span>
+              <span class="title">Customer</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-comment"></i></span>
+              <span class="title">Message</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-question"></i></span>
+              <span class="title">Help</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-gear"></i></span>
+              <span class="title">Setting</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-lock"></i></span>
+              <span class="title">Password</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="icon"
+                ><i class="fa-solid fa-right-from-bracket"></i
+              ></span>
+              <span class="title">Sing Out</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <!-- Top Bar -->
+        <div class="topbar">
+          <div class="toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="search">
+            <label for="">
+              <input type="text" placeholder="Search here" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+          </div>
+          <div class="user">
+            <img src="./img/profile.jpeg" alt="" />
+          </div>
+        </div>
+        <!-- Cards -->
+        <div class="card-box">
+          <div class="card">
+            <div>
+              <div class="number">1504</div>
+              <div class="cardName">Daily View</div>
+            </div>
+            <div class="icon-box">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="number">80</div>
+              <div class="cardName">Sales</div>
+            </div>
+            <div class="icon-box">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="number">248</div>
+              <div class="cardName">Comments</div>
+            </div>
+            <div class="icon-box">
+              <i class="fa-solid fa-comment"></i>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="number">7842</div>
+              <div class="cardName">Earning</div>
+            </div>
+            <div class="icon-box">
+              <i class="fa-solid fa-money-check-dollar"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Chart -->
+        <div class="graphBox">
+          <div class="box">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="box">
+            <canvas id="earning"></canvas>
+          </div>
+        </div>
+        <!-- Order Details List -->
+        <div class="details">
+          <div class="recentOrder">
+            <div class="cardHeader">
+              <h2>Recent Order</h2>
+              <a href="#" class="btn">View All</a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <td>Name</td>
+                  <td>Price</td>
+                  <td>Payment</td>
+                  <td>Status</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Paid</td>
+                  <td class="status delivered"><span>Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Due</td>
+                  <td class="status pending"><span>Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Paid</td>
+                  <td class="status return"><span>Return</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Due</td>
+                  <td class="status inprogress"><span>Inprogress</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Paid</td>
+                  <td class="status delivered"><span>Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Paid</td>
+                  <td class="status pending"><span>Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Paid</td>
+                  <td class="status return"><span>Return</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Due</td>
+                  <td class="status inprogress"><span>Inprogress</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Paid</td>
+                  <td class="status pending"><span>Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Paid</td>
+                  <td class="status pending"><span>Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Hello World</td>
+                  <td>$12000</td>
+                  <td>Due</td>
+                  <td class="status inprogress"><span>Inprogress</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="recentCustomer">
+            <div class="cardHeader">
+              <h2>New Customers</h2>
+            </div>
+            <table>
+              <tr>
+                <td width="60px">
+                  <div class="img-box">
+                    <img src="./img/cus-1.jpeg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Hello <br />
+                    <span>World</span>
+                  </h4>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="60px">
+                  <div class="img-box">
+                    <img src="./img/cus-2.jpeg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Hello <br />
+                    <span>World</span>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="img-box">
+                    <img src="./img/cus-3.webp" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Hello <br />
+                    <span>World</span>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="img-box">
+                    <img src="./img/cus-4.webp" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Hello <br />
+                    <span>World</span>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="img-box">
+                    <img src="./img/cus-5.webp" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Hello <br />
+                    <span>World</span>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="img-box">
+                    <img src="./img/cus-6.webp" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Hello <br />
+                    <span>World</span>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="img-box">
+                    <img src="./img/cus-7.webp" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Hello <br />
+                    <span>World</span>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="img-box">
+                    <img src="./img/cus-8.webp" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Hello <br />
+                    <span>World</span>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="img-box">
+                    <img src="./img/cus-9.jpeg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>
+                    Hello <br />
+                    <span>World</span>
+                  </h4>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chart JS CDN Link -->
+    <script src="
+https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js
+"></script>
+    <script src="./my_chart.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      // Menu Toggle
+      const toggle = document.querySelector(".toggle");
+      const navigation = document.querySelector(".navigation");
+      const main = document.querySelector(".main");
+
+      toggle.onclick = () => {
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+      };
+      // add hovered class in selected list item
+      let list = document.querySelectorAll(".navigation li");
+
+      function activeLink() {
+        list.forEach((item) => {
+          item.classList.remove("hovered");
+          this.classList.add("hovered");
+        });
+      }
+      list.forEach((item) => item.addEventListener("mouseover", activeLink));
+    </script>
+  </body>
+</html>
